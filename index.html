@@ -4,13 +4,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Juurnee · Technical Co-Founder Case Study</title>
-<meta name="description" content="Technical Co-Founder case study for Juurnee. Marketplace diagnosis, analytics, the business to tech bridge, the v2 readiness verdict, judgement and risks, 90 day plan and the growth operating system." />
+<link rel="icon" type="image/svg+xml" href="juurnee.svg">
+<meta name="description" content="Technical Co-Founder case study for Juurnee. Marketplace diagnosis, funnel visibility, the v2 readiness verdict, risks, a 90 day plan, how I would work with the growth co-founder, and evidence of how I operate." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 /* =====================================================================
-   JUURNEE · CTO CASE STUDY  (v2 readiness edition)
+   JUURNEE · CTO CASE STUDY
    1 tokens · 2 base · 3 shell · 4 nav · 5 components · 6 pages · 7 motion · 8 responsive
    ===================================================================== */
 
@@ -41,14 +42,8 @@ code{font-family:var(--mono);font-size:.86em;background:var(--indigo-soft);color
 
 /* 3 · SHELL */
 .shell{display:flex;min-height:100vh}
-.sidebar{
-  width:var(--sidebar-w);flex:0 0 var(--sidebar-w);position:sticky;top:0;height:100vh;
-  background:var(--paper-2);border-right:1px solid var(--line);
-  display:flex;flex-direction:column;padding:26px 20px;z-index:40;
-  overflow-y:auto;-webkit-overflow-scrolling:touch;            /* sidebar scroll fix */
-}
-.sidebar::-webkit-scrollbar{width:8px}
-.sidebar::-webkit-scrollbar-thumb{background:var(--line);border-radius:8px}
+.sidebar{width:var(--sidebar-w);flex:0 0 var(--sidebar-w);position:sticky;top:0;height:100vh;background:var(--paper-2);border-right:1px solid var(--line);display:flex;flex-direction:column;padding:26px 20px;z-index:40;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.sidebar::-webkit-scrollbar{width:8px}.sidebar::-webkit-scrollbar-thumb{background:var(--line);border-radius:8px}
 .main{flex:1;min-width:0}
 .page-wrap{max-width:var(--max);margin:0 auto;padding:60px 40px 120px}
 
@@ -81,7 +76,7 @@ code{font-family:var(--mono);font-size:.86em;background:var(--indigo-soft);color
 .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--indigo-deep);font-weight:600;display:inline-flex;align-items:center;gap:8px;margin-bottom:16px}
 .eyebrow::before{content:"";width:24px;height:2px;background:var(--amber)}
 .lede{font-size:20px;line-height:1.5;color:var(--ink-2);max-width:64ch}
-.lede.big{font-size:23px}
+.lede.big{font-size:22px}
 .card{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r-md);padding:24px 26px;box-shadow:var(--shadow)}
 .card h3{font-size:19px;margin-bottom:8px}
 .grid{display:grid;gap:18px}
@@ -100,7 +95,7 @@ code{font-family:var(--mono);font-size:.86em;background:var(--indigo-soft);color
 .callout.indigo{border-color:var(--indigo);background:var(--indigo-soft)}
 .callout .lab{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--amber-deep);font-weight:600;display:block;margin-bottom:5px}
 .callout.indigo .lab{color:var(--indigo-deep)}
-.callout.big{font-size:19px;font-family:var(--display);color:var(--ink);line-height:1.4}
+.callout.big{font-size:18px;font-family:var(--display);color:var(--ink);line-height:1.45}
 .tick{list-style:none;display:flex;flex-direction:column;gap:12px;margin-top:4px}
 .tick li{position:relative;padding-left:30px;color:var(--ink-2)}
 .tick li::before{content:"";position:absolute;left:0;top:8px;width:16px;height:16px;border-radius:50%;background:var(--indigo-soft);border:1px solid #c9d0fb}
@@ -108,6 +103,13 @@ code{font-family:var(--mono);font-size:.86em;background:var(--indigo-soft);color
 .qlist{list-style:none;display:flex;flex-direction:column;gap:10px}
 .qlist li{padding-left:24px;position:relative;color:var(--ink-2)}
 .qlist li::before{content:"?";position:absolute;left:0;font-family:var(--mono);color:var(--amber-deep);font-weight:600}
+
+/* steps strip */
+.steps3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.stepcard{border:1px solid var(--line);border-radius:var(--r-md);padding:18px 20px;background:var(--paper-2);box-shadow:var(--shadow)}
+.stepcard .n{font-family:var(--mono);font-size:12px;color:var(--amber-deep);font-weight:600}
+.stepcard h4{font-size:16px;margin:6px 0 4px}
+.stepcard p{font-size:13.5px}
 
 /* tables */
 .matrix-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r-md);background:var(--paper-2);box-shadow:var(--shadow)}
@@ -122,26 +124,49 @@ table.matrix .wt{font-family:var(--mono);font-size:11px;color:var(--ink-3);font-
 table.matrix tr.total th,table.matrix tr.total td{border-top:2px solid var(--ink);background:var(--paper)}
 table.matrix .total td{font-family:var(--mono);font-weight:600;font-size:16px}
 .col-win{background:rgba(91,110,232,.06)}table.matrix th.col-win{background:var(--indigo)}.win-tot{color:var(--indigo-deep)!important}
-table.simple{border-collapse:collapse;width:100%;min-width:520px;font-size:14.5px}
+table.simple{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
 table.simple th,table.simple td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--line-2);vertical-align:top}
 table.simple thead th{background:var(--ink);color:#fff;font-weight:600;font-size:13px}
-table.simple tbody th{font-weight:600;color:var(--ink);white-space:nowrap;width:34%}
+table.simple tbody th{font-weight:600;color:var(--ink)}
 table.simple td{color:var(--ink-2)}
 table.simple tbody tr:hover{background:var(--paper)}
 
-/* business to tech bridge */
-.bridge-row{display:grid;grid-template-columns:1fr 46px 1fr;align-items:stretch;margin-bottom:14px}
+/* bridge */
+.bridge-row{display:grid;grid-template-columns:1fr 54px 1fr;align-items:stretch;margin-bottom:14px}
 .bridge-row .biz,.bridge-row .tech{padding:18px 20px;border:1px solid var(--line)}
 .bridge-row .biz{background:#fffaed;border-right:none;border-radius:var(--r-md) 0 0 var(--r-md)}
 .bridge-row .tech{background:var(--indigo-soft);border-left:none;border-radius:0 var(--r-md) var(--r-md) 0}
-.bridge-row .arrow{display:grid;place-items:center;background:var(--ink);color:var(--amber);font-family:var(--mono);font-size:18px}
+.bridge-row .arrow{display:grid;place-items:center;background:var(--ink);color:var(--amber);font-family:var(--mono);font-size:13px;font-weight:600}
 .bridge-row .lab{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;display:block;margin-bottom:6px}
 .bridge-row .biz .lab{color:var(--amber-deep)}.bridge-row .tech .lab{color:var(--indigo-deep)}
 .bridge-row .biz p,.bridge-row .tech p{font-size:14.5px;color:var(--ink-2);margin:0}
 .bridge-row .biz strong,.bridge-row .tech strong{display:block;margin-bottom:4px;font-size:15px}
 .bridge-row .out{font-family:var(--mono);font-size:11px;color:var(--good);margin-top:8px;display:inline-block;background:#effbf5;border:1px solid #bfe6d4;padding:2px 8px;border-radius:20px}
 
-/* verdict cards */
+/* funnel pyramid */
+.pyr .band{margin:0 auto 4px;border-radius:8px;color:#fff;text-align:center;padding:11px 18px;font-weight:600;font-size:15px}
+.pyr .band.t1{width:100%;background:var(--indigo)}
+.pyr .band.t2{width:74%;background:var(--indigo-deep)}
+.pyr .band.t3{width:48%;background:var(--ink)}
+.pyr .detail{display:grid;grid-template-columns:1fr 1fr;gap:8px 18px;padding:8px 4px 18px;border-bottom:1px solid var(--line-2);margin-bottom:14px}
+.pyr .detail .h{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-bottom:4px}
+.pyr .detail p{font-size:14px}
+.pyr .detail .tech{color:var(--indigo-deep);font-size:13.5px}
+
+/* concrete funnel numbers */
+.dropoff{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:6px}
+.dropoff .b{font-family:var(--mono);font-weight:600;background:var(--indigo);color:#fff;border-radius:8px;padding:8px 12px;font-size:13px;text-align:center;line-height:1.2}
+.dropoff .b small{display:block;font-weight:400;font-size:10px;color:rgba(255,255,255,.75)}
+.dropoff .b.leak{background:var(--bad)}
+.dropoff .g{color:var(--ink-3);font-family:var(--mono)}
+
+/* image / doc placeholders */
+.imgph{border:2px dashed #d8d6c8;border-radius:var(--r-md);background:var(--paper);padding:30px;text-align:center;color:var(--ink-3)}
+.imgph .ic{width:46px;height:46px;border-radius:12px;background:var(--indigo-soft);display:grid;place-items:center;margin:0 auto 10px}
+.imgph p{font-size:13.5px}.imgph code{font-size:12px}
+figure{margin:0}figcaption{font-size:13px;color:var(--ink-3);margin-top:8px;font-style:italic}
+
+/* verdict */
 .verdict{border:1px solid var(--line);border-left-width:4px;border-radius:var(--r-md);padding:20px 22px;background:var(--paper-2);box-shadow:var(--shadow)}
 .verdict + .verdict{margin-top:14px}
 .verdict.go{border-left-color:var(--good)}.verdict.guard{border-left-color:var(--amber)}.verdict.stop{border-left-color:var(--bad)}
@@ -151,10 +176,15 @@ table.simple tbody tr:hover{background:var(--paper)}
 .verdict.go .tag{background:#effbf5;color:var(--good)}.verdict.guard .tag{background:#fff8e6;color:var(--amber-deep)}.verdict.stop .tag{background:#fdefec;color:var(--bad)}
 .verdict p{font-size:14.5px}
 
-/* scenario flip rows */
+/* checks (v2 review + scenarios share styles) */
+.checks{list-style:none;display:flex;flex-direction:column;gap:9px}
+.checks li{position:relative;padding-left:28px;font-size:14.5px;color:var(--ink-2)}
+.checks li::before{content:"";position:absolute;left:0;top:3px;width:17px;height:17px;border-radius:4px;border:2px solid var(--indigo);background:var(--indigo-soft)}
+.checks li::after{content:"✓";position:absolute;left:3px;top:1px;font-size:12px;color:var(--indigo-deep);font-weight:700}
+
+/* scenario */
 .scenario{display:grid;grid-template-columns:1fr 40px 1fr;align-items:center;border:1px solid var(--line);border-radius:var(--r-sm);overflow:hidden;margin-bottom:10px;background:var(--paper-2)}
-.scenario .if{padding:14px 16px;background:var(--paper)}
-.scenario .then{padding:14px 16px}
+.scenario .if{padding:14px 16px;background:var(--paper)}.scenario .then{padding:14px 16px}
 .scenario .arr{justify-self:center;color:var(--indigo);font-family:var(--mono);font-weight:600}
 .scenario .lab{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:3px}
 .scenario .if b,.scenario .then b{color:var(--ink)}
@@ -164,14 +194,19 @@ table.simple tbody tr:hover{background:var(--paper)}
 .risk .n{position:absolute;left:16px;top:18px;width:28px;height:28px;border-radius:50%;background:var(--bad);color:#fff;font-family:var(--mono);font-weight:600;font-size:13px;display:grid;place-items:center}
 .risk h3{font-size:16px;margin-bottom:4px}.risk p{font-size:14px}
 
-/* personal note */
-.note{position:relative;border:1px solid #f0e2b6;background:linear-gradient(180deg,#fffdf4,#fffaed);border-radius:var(--r-md);padding:26px 30px;box-shadow:var(--shadow)}
-.note .q{position:absolute;left:18px;top:6px;font-family:var(--display);font-size:60px;color:var(--amber);opacity:.5;line-height:1}
-.note p{font-size:16.5px;color:var(--ink-2);line-height:1.65}
-.note p + p{margin-top:12px}
-.note .sig{margin-top:14px;font-family:var(--mono);font-size:12px;color:var(--ink-3)}
+/* timeline */
+.timeline{position:relative;padding-left:30px;margin-top:8px}
+.timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl{position:relative;padding-bottom:24px}
+.tl:last-child{padding-bottom:0}
+.tl::before{content:"";position:absolute;left:-26px;top:3px;width:14px;height:14px;border-radius:50%;background:var(--amber);border:3px solid var(--paper);box-shadow:0 0 0 1px var(--line)}
+.tl .when{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-deep);font-weight:600}
+.tl h4{font-size:17px;margin:4px 0 4px}
+.tl p{font-size:14.5px}
+.tl .impl{margin-top:8px;font-size:13.5px;color:var(--ink-2);background:var(--indigo-soft);border-radius:var(--r-sm);padding:9px 13px}
+.tl .impl b{color:var(--indigo-deep)}
 
-/* growth loop */
+/* loop */
 .loop{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin-top:8px}
 .loop .node{padding:10px 16px;border-radius:30px;background:var(--indigo);color:#fff;font-weight:600;font-size:13.5px;white-space:nowrap}
 .loop .node.alt{background:var(--amber);color:var(--ink)}
@@ -179,12 +214,15 @@ table.simple tbody tr:hover{background:var(--paper)}
 .loopnote{font-size:13px;color:var(--ink-3);margin-top:12px;font-family:var(--mono)}
 
 /* horizon */
-.horizon{border:1px solid var(--line);border-radius:var(--r-md);background:var(--paper-2);padding:22px 24px;box-shadow:var(--shadow);position:relative;overflow:hidden}
-.horizon .when{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-deep);font-weight:600}
-.horizon h3{font-size:18px;margin:8px 0}
-.horizon p{font-size:14.5px}
-.horizon.future{background:var(--ink)}
-.horizon.future h3{color:#fff}.horizon.future p{color:rgba(255,255,255,.78)}.horizon.future .when{color:var(--amber)}
+.horizon{border:1px solid var(--line);border-radius:var(--r-md);background:var(--paper-2);padding:22px 24px;box-shadow:var(--shadow)}
+.horizon h3{font-size:16px;margin-bottom:8px}
+
+/* flow (architecture) */
+.flow{display:flex;flex-direction:column;align-items:center;gap:0;margin-top:8px}
+.flow .node{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r-sm);padding:12px 18px;text-align:center;font-size:14px;color:var(--ink);width:100%;max-width:480px;box-shadow:var(--shadow)}
+.flow .node.live{border-color:#c9d0fb;background:var(--indigo-soft)}
+.flow .node.end{border-color:#bfe6d4;background:#effbf5}
+.flow .down{color:var(--ink-3);font-family:var(--mono);padding:5px 0;font-size:13px}
 
 /* options */
 .opt{border:1px solid var(--line);border-radius:var(--r-md);padding:22px 24px;background:var(--paper-2);box-shadow:var(--shadow)}
@@ -197,16 +235,16 @@ table.simple tbody tr:hover{background:var(--paper)}
 .tradeoff ul{list-style:none;display:flex;flex-direction:column;gap:6px}
 .tradeoff li{font-size:13.5px;color:var(--ink-2);padding-left:16px;position:relative}
 .tradeoff .pro li::before{content:"+";position:absolute;left:0;color:var(--good);font-weight:700}
-.tradeoff .con li::before{content:"–";position:absolute;left:0;color:var(--bad);font-weight:700}
+.tradeoff .con li::before{content:"\2013";position:absolute;left:0;color:var(--bad);font-weight:700}
 
-/* funnel */
+/* funnel bars */
 .funnel{display:flex;flex-direction:column;gap:7px;margin-top:8px}
 .funnel .step{display:flex;align-items:center;gap:14px}
 .funnel .bar{height:42px;border-radius:8px;display:flex;align-items:center;padding:0 16px;color:#fff;font-weight:600;font-size:14px;background:var(--indigo);white-space:nowrap}
 .funnel .bar.alt{background:var(--amber-deep)}
 .funnel .meta{font-family:var(--mono);font-size:12px;color:var(--ink-3)}
 
-/* phases / weeks */
+/* phases / days */
 .phase{display:grid;grid-template-columns:128px 1fr;border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;background:var(--paper-2);box-shadow:var(--shadow)}
 .phase + .phase{margin-top:14px}
 .phase .when{background:var(--ink);color:#fff;padding:20px 16px;display:flex;flex-direction:column;justify-content:center}
@@ -216,13 +254,11 @@ table.simple tbody tr:hover{background:var(--paper)}
 .phase .what h4{font-size:15.5px;margin-bottom:4px}
 .phase .what ul{list-style:none;display:flex;flex-direction:column;gap:6px;margin-top:6px}
 .phase .what li{position:relative;padding-left:18px;font-size:14px;color:var(--ink-2)}
-.phase .what li::before{content:"›";position:absolute;left:0;color:var(--indigo);font-family:var(--mono);font-weight:700}
+.phase .what li::before{content:"\203A";position:absolute;left:0;color:var(--indigo);font-family:var(--mono);font-weight:700}
 .deliverable{margin-top:12px;font-family:var(--mono);font-size:11.5px;background:var(--ink);color:var(--amber);display:inline-block;padding:6px 12px;border-radius:6px}
 .deliverable b{color:#fff;font-weight:500}
-
-/* week strip (7 days) */
 .days{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:8px}
-.day{border:1px solid var(--line);border-radius:var(--r-sm);padding:14px 14px;background:var(--paper-2);box-shadow:var(--shadow)}
+.day{border:1px solid var(--line);border-radius:var(--r-sm);padding:14px;background:var(--paper-2);box-shadow:var(--shadow)}
 .day .dd{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber-deep);font-weight:600}
 .day p{font-size:13.5px;margin-top:6px;color:var(--ink-2)}
 
@@ -235,24 +271,37 @@ table.simple tbody tr:hover{background:var(--paper)}
 .capstone .col h5{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber);margin-bottom:10px}
 .capstone .col ul{list-style:none;display:flex;flex-direction:column;gap:8px}
 .capstone .col li{font-size:14px;color:rgba(255,255,255,.85);padding-left:16px;position:relative}
-.capstone .col li::before{content:"›";position:absolute;left:0;color:var(--amber)}
+.capstone .col li::before{content:"\203A";position:absolute;left:0;color:var(--amber)}
 
-/* embed + hero + pager */
+/* embed + evidence */
 .embed-frame{position:relative;width:100%;border-radius:var(--r-md);overflow:hidden;border:1px solid var(--line);background:var(--paper-2);box-shadow:var(--shadow);aspect-ratio:16/9}
 .embed-frame.doc{aspect-ratio:4/3}
 .embed-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .embed-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:30px;background:radial-gradient(circle at 30% 30%,rgba(91,110,232,.08),transparent 60%),radial-gradient(circle at 75% 70%,rgba(255,192,46,.12),transparent 55%),var(--paper)}
 .embed-placeholder .ico{width:54px;height:54px;border-radius:14px;background:var(--indigo);display:grid;place-items:center;box-shadow:0 10px 24px rgba(91,110,232,.3)}
+.ev-item{border:1px solid var(--line);border-radius:var(--r-md);background:var(--paper-2);box-shadow:var(--shadow);overflow:hidden}
+.ev-item + .ev-item{margin-top:18px}
+.ev-head{padding:16px 20px;border-bottom:1px solid var(--line-2);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.ev-head h3{font-size:17px}
+.ev-head .proves{font-size:13.5px;color:var(--ink-2);max-width:60ch;margin-top:2px}
+.ev-body{padding:18px 20px}
+.ev-frame{position:relative;width:100%;aspect-ratio:16/9;border:1px solid var(--line);border-radius:var(--r-sm);overflow:hidden;background:var(--paper)}
+.ev-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.ev-li{display:flex;justify-content:center}
+.ev-li iframe{border-radius:var(--r-sm);max-width:100%}
+.btn{display:inline-flex;align-items:center;gap:7px;font-family:var(--body);font-size:13px;font-weight:600;color:#fff;background:var(--indigo);padding:8px 14px;border-radius:var(--r-sm);text-decoration:none}
+.btn:hover{background:var(--indigo-deep);text-decoration:none}
+
+/* hero + pager */
 .hero{position:relative;overflow:hidden;border-radius:var(--r-lg);padding:60px 54px;background:var(--ink);color:#fff;box-shadow:var(--shadow-lg)}
 .hero::before{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(255,192,46,.35),transparent 65%)}
 .hero::after{content:"";position:absolute;left:-80px;bottom:-140px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(91,110,232,.5),transparent 62%)}
 .hero > *{position:relative;z-index:1}
-.hero h1{color:#fff;font-size:clamp(36px,5.4vw,60px);line-height:1.04;margin:14px 0}
-.hero h1 em{font-style:italic;color:var(--amber)}
+.hero h1{color:#fff;font-size:clamp(34px,5vw,56px);line-height:1.06;margin:14px 0}
+.hero .lede{color:rgba(255,255,255,.82)}
 .hero .meta-row{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:28px;font-family:var(--mono);font-size:13px;color:rgba(255,255,255,.72)}
 .hero .meta-row b{color:#fff;font-weight:500}
 .hero .eyebrow{color:var(--amber)}.hero .eyebrow::before{background:var(--amber)}
-.hero .lede{color:rgba(255,255,255,.82)}
 .pager{display:flex;justify-content:space-between;gap:14px;margin-top:54px;padding-top:28px;border-top:1px solid var(--line)}
 .pager button{font-family:var(--body);font-size:14px;font-weight:600;cursor:pointer;border:1px solid var(--line);background:var(--paper-2);color:var(--ink-2);padding:12px 18px;border-radius:var(--r-sm);transition:.16s;display:flex;flex-direction:column;gap:2px;text-align:left;max-width:46%}
 .pager button:hover{border-color:var(--indigo);color:var(--ink);background:#fff}
@@ -273,10 +322,8 @@ table.simple tbody tr:hover{background:var(--paper)}
 @keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 .reveal{opacity:0;transform:translateY(14px);animation:rise .6s ease forwards}
 @keyframes rise{to{opacity:1;transform:none}}
-.page.active .reveal:nth-child(1){animation-delay:.04s}
-.page.active .reveal:nth-child(2){animation-delay:.1s}
-.page.active .reveal:nth-child(3){animation-delay:.16s}
-.page.active .reveal:nth-child(4){animation-delay:.22s}
+.page.active .reveal:nth-child(1){animation-delay:.04s}.page.active .reveal:nth-child(2){animation-delay:.1s}
+.page.active .reveal:nth-child(3){animation-delay:.16s}.page.active .reveal:nth-child(4){animation-delay:.22s}
 .page.active .reveal:nth-child(5){animation-delay:.28s}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;scroll-behavior:auto}}
 
@@ -286,16 +333,16 @@ table.simple tbody tr:hover{background:var(--paper)}
   .sidebar{position:fixed;left:0;top:0;transform:translateX(-100%);transition:transform .26s ease;width:300px;flex-basis:300px;box-shadow:var(--shadow-lg)}
   body.nav-open .sidebar{transform:none}body.nav-open .scrim{display:block}
   .mobilebar{display:flex}
-  .grid.c2,.grid.c3,.grid.c4,.tradeoff,.capstone .cols,.days{grid-template-columns:1fr}
+  .grid.c2,.grid.c3,.grid.c4,.tradeoff,.capstone .cols,.days,.steps3,.pyr .detail{grid-template-columns:1fr}
   .hero{padding:42px 26px}
   .phase{grid-template-columns:1fr}.phase .when{flex-direction:row;align-items:baseline;gap:10px;padding:13px 18px}
   .bridge-row,.scenario{grid-template-columns:1fr}
   .bridge-row .biz{border-radius:var(--r-md) var(--r-md) 0 0;border-right:1px solid var(--line);border-bottom:none}
   .bridge-row .tech{border-radius:0 0 var(--r-md) var(--r-md);border-left:1px solid var(--line);border-top:none}
-  .bridge-row .arrow{height:30px;font-size:14px;transform:rotate(90deg)}
-  .scenario .arr{padding:4px 0}
+  .bridge-row .arrow{height:30px}
+  .pyr .band.t2,.pyr .band.t3{width:100%}
   .page-wrap{padding:36px 20px 90px}
-  .pager button{max-width:48%}.lede.big{font-size:20px}
+  .pager button{max-width:48%}.lede.big{font-size:19px}
 }
 @media (max-width:480px){
   body{font-size:16px}.page-wrap{padding:26px 16px 80px}
@@ -327,9 +374,9 @@ table.simple tbody tr:hover{background:var(--paper)}
           <li><a data-page="summary" class="active"><span class="idx">00</span> Executive Summary</a></li>
           <li class="navgroup">The Business</li>
           <li><a data-page="marketplace"><span class="idx">01</span> The Marketplace</a></li>
-          <li><a data-page="analytics"><span class="idx">02</span> Analytics &amp; Signal</a></li>
+          <li><a data-page="analytics"><span class="idx">02</span> Funnel Visibility</a></li>
           <li class="navgroup">The Synthesis</li>
-          <li><a data-page="bridge"><span class="idx">03</span> Business → Tech</a></li>
+          <li><a data-page="bridge"><span class="idx">03</span> Business to Tech</a></li>
           <li class="navgroup">The Build</li>
           <li><a data-page="v2"><span class="idx">04</span> The v2 Decision</a></li>
           <li><a data-page="vision"><span class="idx">05</span> Product Vision</a></li>
@@ -340,7 +387,7 @@ table.simple tbody tr:hover{background:var(--paper)}
           <li><a data-page="growthos"><span class="idx">08</span> Working Together</a></li>
           <li class="navgroup">Reference</li>
           <li><a data-page="deck"><span class="idx">09</span> The Deck</a></li>
-          <li><a data-page="appendix"><span class="idx">10</span> Appendix</a></li>
+          <li><a data-page="appendix"><span class="idx">10</span> Appendix &amp; Evidence</a></li>
         </ul>
       </nav>
     </div>
@@ -352,63 +399,56 @@ table.simple tbody tr:hover{background:var(--paper)}
       <!-- 00 · EXEC SUMMARY -->
       <section class="page active" id="summary">
         <div class="hero reveal">
-          <span class="eyebrow">Technical Co-Founder · Juurnee</span>
-          <h1>Grow the marketplace.<br>The platform is <em>how</em>,<br>not the point.</h1>
-          <p class="lede">Juurnee's biggest risks don't live in the code. They live in a match rate, a liquidity ratio and a retention curve we can't currently measure. My job is to turn those into numbers we can move, then make the platform fast enough to act on them. Business first, technology as the lever.</p>
+          <span class="eyebrow">Technical Co-Founder Juurnee · by Anisha Imran </span>
+          <h1>Grow the marketplace.<br>The platform is how we get there.</h1>
+          <p class="lede">Before I rebuild anything, I want to see what is actually driving matches, drop-offs, trust and revenue. Right now we cannot, and that is the real problem. So I would make the marketplace visible first, then make the platform fast enough to act on what we learn.</p>
           <div class="meta-row">
             <span><b>Model:</b> two sided marketplace</span>
             <span><b>Users:</b> ~16,000 live</span>
-            <span><b>Already in play:</b> a v2 in Claude Code &amp; GitHub</span>
+            <span><b>Already in play:</b> a v2 in Claude Code and GitHub</span>
           </div>
         </div>
 
         <div class="spacer lg"></div>
 
         <div class="reveal">
-          <span class="s-num">THE ANSWER, IN A PARAGRAPH</span>
-          <h2 class="title" style="margin-top:6px">What I'd actually do</h2>
-          <p class="lede big">Juurnee's value is its marketplace. Seekers who need a Companion, and Companions who get paid to travel. The questions that decide our future are about that, not the stack: how many requests get matched, how fast, and whether people come back. We can't answer them yet, and that is the real blindness. So week one I make the marketplace visible. At the same time, a v2 already exists in Claude Code and GitHub, which changes my first platform job. It isn't to pick a stack. It's to audit that build and decide whether it is safe to ship, safe to ship behind guardrails, or not ready yet. We keep Bubble live until v2 earns its place, protect the 16,000 users with phased rollout and instant rollback, and rebuild only the parts the data and the code review prove we need to.</p>
+          <span class="s-num">THE SHORT VERSION</span>
+          <h2 class="title" style="margin-top:6px">What I would do</h2>
+          <p class="lede big">Juurnee's value is its marketplace: Seekers who need a Companion, and Companions who get paid to travel. The questions that decide our future are about that, not the stack. How many requests get matched, how fast, and whether people come back. We cannot answer them yet. So week one I turn on the analytics. A v2 already exists, so my first platform job is not to pick a stack, it is to audit that build and decide whether it is safe to ship, ship behind guardrails, or hold. We keep Bubble live until v2 earns its place, protect the 16,000 users with phased rollout and instant rollback, and rebuild only the parts the data and the code review prove we need to.</p>
+        </div>
+
+        <div class="spacer"></div>
+
+        <div class="steps3 reveal">
+          <div class="stepcard"><div class="n">01</div><h4>See the marketplace</h4><p>Turn on analytics so we can read match rate, drop-offs, trust and revenue.</p></div>
+          <div class="stepcard"><div class="n">02</div><h4>Audit the v2</h4><p>Review the existing build and decide if it is safe to ship, guard, or hold.</p></div>
+          <div class="stepcard"><div class="n">03</div><h4>Ship safely</h4><p>Roll out behind flags with rollback, Bubble stays live until v2 proves itself.</p></div>
         </div>
 
         <div class="spacer"></div>
 
         <div class="reveal">
-          <p style="font-weight:600;color:var(--ink);margin-bottom:6px">The numbers that decide our valuation, and that we can't see today:</p>
+          <p style="font-weight:600;color:var(--ink);margin-bottom:6px">The numbers that decide our valuation, and that we cannot see today:</p>
           <div class="grid c3">
-            <div class="metric"><div class="v unk">?</div><div class="l">Match rate</div><div class="sub">core marketplace health</div></div>
-            <div class="metric"><div class="v unk">?</div><div class="l">Time to match</div><div class="sub">the Seeker experience</div></div>
+            <div class="metric"><div class="v unk">?</div><div class="l">Match rate</div><div class="sub">are requests getting solved</div></div>
+            <div class="metric"><div class="v unk">?</div><div class="l">Time to match</div><div class="sub">are users waiting too long</div></div>
             <div class="metric"><div class="v unk">?</div><div class="l">Repeat &amp; retention</div><div class="sub">does the loop close</div></div>
           </div>
         </div>
 
-        <div class="spacer"></div>
-
-        <div class="grid c2 reveal">
-          <div class="card">
-            <span class="pill indigo">Problem 1 · flying blind</span>
-            <h3 style="margin-top:12px">We can't see the marketplace</h3>
-            <p>With no instrumentation we can't answer match rate, liquidity or retention, and those numbers are the business. This is solvable now, on the current app, with nothing else blocked behind it. So it goes first.</p>
-          </div>
-          <div class="card">
-            <span class="pill indigo">Problem 2 · too slow</span>
-            <h3 style="margin-top:12px">We can't act fast enough, and the fix may already exist</h3>
-            <p>Bubble caps how fast we plug the leaks we find. But there's already a v2. So the move isn't to assume a rebuild. It's to find out if v2 is shippable and launch it safely, rebuilding only what the audit flags as risky.</p>
-          </div>
+        <div class="callout reveal">
+          <span class="lab">Can we actually build this, and can I explain it?</span>
+          Yes to both. Tools like PostHog or Mixpanel track events on Bubble today and on v2 later. The idea is simple enough to say in one sentence: every important user action sends an event, and then we can see how many people move from one step to the next. Nothing here is hard to maintain or hard to explain.
         </div>
 
         <div class="callout indigo reveal">
-          <span class="lab">How we'd know it's working</span>
+          <span class="lab">How we would know it is working</span>
           The scoreboard is commercial before it is technical. Match rate up, time to match down, activation and retention climbing, and the Bubble bill growing slower than revenue. Engineering speed matters because it causes those outcomes, not for its own sake.
-        </div>
-
-        <div class="callout reveal">
-          <span class="lab">On format</span>
-          The brief judges clarity over production value, so I built a small modular website rather than only slides, because the way I structure a problem is part of the answer. The five minute <a data-page="deck" class="goto">slide version</a> and my full working (<a data-page="appendix" class="goto">appendix</a>) are both one click away.
         </div>
 
         <div class="pager">
           <button disabled><span class="pl">Start</span>Executive Summary</button>
-          <button class="next" data-goto="marketplace"><span class="pl">Next →</span>01 · The Marketplace</button>
+          <button class="next" data-goto="marketplace"><span class="pl">Next</span>01 · The Marketplace</button>
         </div>
       </section>
 
@@ -417,117 +457,148 @@ table.simple tbody tr:hover{background:var(--paper)}
         <div class="reveal">
           <span class="eyebrow">Part 1 · Diagnosis · The Business</span>
           <h2 class="title">Start With the Marketplace</h2>
-          <p class="lede">Juurnee is a two sided marketplace. Its health isn't a page speed score, it's match rate, liquidity and retention. So the diagnosis starts with the business, and the platform waits its turn.</p>
+          <p class="lede">Juurnee is a two sided marketplace. Its health is not a page speed score, it is whether requests get matched, whether people wait too long, and whether they come back. So the diagnosis starts with the business.</p>
         </div>
 
         <div class="sec reveal">
-          <h3 class="sh"><span class="s-num">1.1</span> The questions that come before any platform decision</h3>
-          <p>These are the answers that would actually move my recommendation. None of them are technical.</p>
-          <div class="spacer sm"></div>
-          <div class="grid c2">
-            <ul class="qlist">
-              <li>What share of Juurnee requests get a successful match?</li>
-              <li>What's the average time to match, and the spread?</li>
-              <li>What's the supply and demand ratio, by route?</li>
-              <li>Companion retention. Do they take a second and third trip?</li>
-            </ul>
-            <ul class="qlist">
-              <li>Seeker retention. What's the repeat booking rate?</li>
-              <li>Referral rate. Are network effects starting?</li>
-              <li>Revenue per user and per successful trip?</li>
-              <li>Where does trust break (KYC drop off, no shows, reviews)?</li>
-            </ul>
-          </div>
-          <div class="callout">
-            <span class="lab">The line that frames everything</span>
-            <strong>Until these are known, any platform decision is secondary.</strong> Replatforming a marketplace you can't measure is rebuilding a car while blindfolded to which wheel is flat. Visibility first, always.
-          </div>
-        </div>
-
-        <div class="sec reveal">
-          <h3 class="sh"><span class="s-num">1.2</span> The marketplace health dashboard</h3>
-          <p>The handful of numbers I'd put in front of you and the marketing co-founder every week. This is the real scoreboard for enterprise value.</p>
+          <h3 class="sh"><span class="s-num">1.1</span> The scoreboard, in plain language</h3>
+          <p>Rather than abstract marketplace jargon, here is the same thing as a list of questions you already care about, the number that answers each, and the decision it unlocks.</p>
           <div class="spacer sm"></div>
           <div class="matrix-wrap">
             <table class="simple">
-              <thead><tr><th>Metric</th><th>What it tells us</th><th>Side</th></tr></thead>
+              <thead><tr><th>Your question</th><th>The metric</th><th>The decision it helps make</th></tr></thead>
               <tbody>
-                <tr><th>Match rate</th><td>Core marketplace health. Does demand get served at all?</td><td><span class="pill">both</span></td></tr>
-                <tr><th>Time to match</th><td>The Seeker experience. Long waits are silent churn.</td><td><span class="pill">demand</span></td></tr>
-                <tr><th>Companion liquidity</th><td>Supply density by route and time, the thing that limits everything.</td><td><span class="pill warn">supply</span></td></tr>
-                <tr><th>Repeat booking rate</th><td>Retention, the cheapest growth there is.</td><td><span class="pill">demand</span></td></tr>
-                <tr><th>Referral rate</th><td>Whether network effects are kicking in.</td><td><span class="pill good">both</span></td></tr>
-                <tr><th>Route coverage</th><td>Where we can credibly expand next.</td><td><span class="pill">supply</span></td></tr>
-                <tr><th>Revenue per trip</th><td>Unit economics. Is each match actually worth it?</td><td><span class="pill indigo">$</span></td></tr>
+                <tr><th>Are requests getting solved?</th><td>Match rate</td><td>Improve matching, or add supply</td></tr>
+                <tr><th>Are users waiting too long?</th><td>Time to match</td><td>Prioritise the matching logic</td></tr>
+                <tr><th>Are Companions coming back?</th><td>Companion retention</td><td>Build reputation and incentives</td></tr>
+                <tr><th>Where should we grow next?</th><td>Route liquidity</td><td>Focus marketing by route</td></tr>
+                <tr><th>Is the product making money?</th><td>Revenue per completed trip</td><td>Set pricing and unit economics</td></tr>
               </tbody>
             </table>
           </div>
-          <p style="font-size:13px;color:var(--ink-3);margin-top:10px;font-family:var(--mono)">This dashboard is itself a week one deliverable (see section 07).</p>
+          <div class="callout"><span class="lab">The line that frames everything</span>Until we know these numbers, any platform decision is secondary. Replatforming a marketplace you cannot measure is rebuilding a car while blindfolded to which wheel is flat.</div>
+        </div>
+
+        <div class="sec reveal">
+          <h3 class="sh"><span class="s-num">1.2</span> What that scoreboard could look like</h3>
+          <p>For reference, this is the kind of simple founder dashboard I mean. One screen you can open any morning, no analyst required.</p>
+          <div class="spacer sm"></div>
+          <figure>
+            <img 
+              src="./dashboard.png" 
+              alt="Example founder dashboard showing marketplace metrics such as match rate, time to match, activation and retention"
+              style="width:100%;border-radius:10px;border:1px solid var(--line);box-shadow:var(--shadow);display:block;"
+            >
+            <figcaption>
+              Reference only. A live founder dashboard showing match rate, time to match, activation and retention on one screen.
+            </figcaption>
+          </figure>
         </div>
 
         <div class="sec reveal">
           <h3 class="sh"><span class="s-num">1.3</span> The dynamics that drive the tech</h3>
           <div class="grid c3">
-            <div class="card"><span class="pill warn">liquidity</span><h3 style="margin-top:10px;font-size:17px">Supply is the bottleneck</h3><p>In most marketplaces the scarce side limits growth. If Companions are thin on key routes, no amount of Seeker acquisition helps. It just lengthens time to match. That makes the matching engine and supply analytics the highest leverage builds.</p></div>
-            <div class="card"><span class="pill indigo">trust</span><h3 style="margin-top:10px;font-size:17px">Trust is the product</h3><p>People are handing over a child, an elderly parent, or themselves. ID verification isn't a feature, it's the trust layer the whole marketplace rests on. The friction it adds versus the trust it buys is worth measuring, not guessing.</p></div>
-            <div class="card"><span class="pill good">cold start</span><h3 style="margin-top:10px;font-size:17px">Density beats reach</h3><p>One route with reliable liquidity beats fifty routes with none. That argues for concentrating supply geographically before expanding, which is a commercial call the data should drive.</p></div>
+            <div class="card"><span class="pill warn">liquidity</span><h3 style="margin-top:10px;font-size:17px">Supply is the bottleneck</h3><p>If Companions are thin on key routes, more Seeker sign-ups do not help, they just lengthen the wait. That makes matching and supply analytics the highest leverage builds.</p></div>
+            <div class="card"><span class="pill indigo">trust</span><h3 style="margin-top:10px;font-size:17px">Trust is the product</h3><p>People are handing over a child, a parent, or themselves. ID verification is the trust layer the whole marketplace rests on, so the friction it adds is worth measuring.</p></div>
+            <div class="card"><span class="pill good">cold start</span><h3 style="margin-top:10px;font-size:17px">Density beats reach</h3><p>One route with reliable liquidity beats fifty with none. That argues for concentrating supply before expanding, which is a commercial call the data should drive.</p></div>
           </div>
         </div>
 
         <div class="sec reveal">
-          <h3 class="sh"><span class="s-num">1.4</span> Assumptions I'm carrying</h3>
-          <ul class="tick">
-            <li><strong>The marketplace, not the stack, is the main risk.</strong> A fast platform serving a marketplace we can't measure still fails.</li>
-            <li><strong>Bubble was the right early call.</strong> It got Juurnee to 16,000 users. The question is the right next move, not an apology for the last one.</li>
-            <li><strong>Visibility is independent of the platform question,</strong> so we do it first, in days, not quarters.</li>
-            <li><strong>There is already a v2.</strong> I understand a remake is sitting in Claude Code and GitHub, so week one I assess its readiness rather than assume a clean slate.</li>
-            <li><strong>Continuity is not negotiable.</strong> No plan that freezes the product for a rebuild is acceptable at this stage.</li>
-          </ul>
+          <h3 class="sh"><span class="s-num">1.4</span> Assumptions I am making, and would confirm in week one</h3>
+          <p>Stated plainly, because where I am guessing, I want you to see it.</p>
+          <div class="spacer sm"></div>
+          <div class="matrix-wrap">
+            <table class="simple">
+              <thead><tr><th>I am assuming</th><th>Why it matters if I am wrong</th></tr></thead>
+              <tbody>
+                <tr><th>The marketplace, not the code, is the main risk</th><td>If the product already works and the issue is purely speed, I would weight the v2 launch higher and analytics lower</td></tr>
+                <tr><th>Bubble was the right early choice</th><td>It got us to 16,000 users, so this is about the next move, not undoing the last one</td></tr>
+                <tr><th>Visibility can be fixed without replatforming</th><td>It means we get value in week one instead of waiting on a migration</td></tr>
+                <tr><th>The v2 is incomplete but salvageable</th><td>If it is actually production ready, we ship sooner. If it is unsafe, we slow down and contain it</td></tr>
+                <tr><th>Continuity is non negotiable</th><td>No plan that freezes the product for a rebuild is acceptable while users are live</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         <div class="pager">
-          <button data-goto="summary"><span class="pl">← Back</span>00 · Executive Summary</button>
-          <button class="next" data-goto="analytics"><span class="pl">Next →</span>02 · Analytics &amp; Signal</button>
+          <button data-goto="summary"><span class="pl">Back</span>00 · Executive Summary</button>
+          <button class="next" data-goto="analytics"><span class="pl">Next</span>02 · Funnel Visibility</button>
         </div>
       </section>
 
-      <!-- 02 · ANALYTICS -->
+      <!-- 02 · FUNNEL VISIBILITY -->
       <section class="page" id="analytics">
         <div class="reveal">
           <span class="eyebrow">Part 1 · Diagnosis · Visibility</span>
-          <h2 class="title">Making the Marketplace Legible</h2>
-          <p class="lede">"We're flying blind" is the founder's own phrase, and it's the fastest, highest leverage thing I can fix. This is week one work, and it doesn't wait on any platform decision.</p>
+          <h2 class="title">Funnel Visibility</h2>
+          <p class="lede">"Flying blind" is your own phrase, and it is the fastest, highest leverage thing I can fix. It does not wait on any platform decision. There are three layers of visibility, and each one helps a different part of the business.</p>
         </div>
 
         <div class="sec reveal">
-          <h3 class="sh"><span class="s-num">2.1</span> The funnel, both sides of the marketplace</h3>
-          <p>A single funnel view would miss half the business. I'd instrument the Seeker journey and the supply and match dynamics together.</p>
-          <div class="funnel" style="margin-top:14px">
-            <div class="step"><div class="bar" style="width:96%">Land on site</div></div>
-            <div class="step"><div class="bar" style="width:80%">Sign up</div><span class="meta">activation gate</span></div>
-            <div class="step"><div class="bar" style="width:62%">Verify ID (KYC)</div><span class="meta">trust vs friction</span></div>
-            <div class="step"><div class="bar" style="width:48%">Create a Juurnee request</div></div>
-            <div class="step"><div class="bar alt" style="width:34%">Get matched (liquidity)</div><span class="meta">supply constrained</span></div>
-            <div class="step"><div class="bar" style="width:20%">Trip completed, repeat, refer</div><span class="meta">retention loop</span></div>
-          </div>
-          <p style="font-size:13px;color:var(--ink-3);margin-top:10px;font-family:var(--mono)">Widths are illustrative. The point is we can't draw this with real numbers yet. Step one is being able to.</p>
-        </div>
-
-        <div class="sec reveal">
-          <h3 class="sh"><span class="s-num">2.2</span> How I'd build the signal</h3>
-          <div class="grid c2">
-            <div class="card"><h3>Event taxonomy first</h3><p>Before any tool, a clean event schema for both sides: <code>signup</code>, <code>kyc_started</code>, <code>kyc_completed</code>, <code>request_created</code>, <code>companion_applied</code>, <code>match_made</code>, <code>trip_completed</code>, <code>referral_sent</code>. A consistent taxonomy is what makes every later analysis trustworthy.</p></div>
-            <div class="card"><h3>PostHog on the live app</h3><p>Product analytics, funnels, session replay and feature flags. It bolts onto Bubble today with no migration. Funnels and retention go live in week two, and session replay shows why people drop, not just where.</p></div>
+          <h3 class="sh"><span class="s-num">2.1</span> Three layers of funnel visibility</h3>
+          <p>Think of it as a funnel with three bands. The widest, top of funnel, is where people come from. The middle is what they do inside the product. The bottom is what turns into money.</p>
+          <div class="spacer sm"></div>
+          <div class="pyr">
+            <div class="band t1">Top of funnel · where users come from</div>
+            <div class="detail">
+              <div><div class="h">Examples</div><p>Instagram, Google, PR, referrals, paid ads</p></div>
+              <div><div class="h">How I would track it</div><p class="tech">UTM links, Google Analytics, PostHog source tracking, and a signup question "where did you hear about us?"</p></div>
+            </div>
+            <div class="band t2">Middle of funnel · what users do inside</div>
+            <div class="detail">
+              <div><div class="h">Examples</div><p>Sign up, verify ID, create a request, browse Companions</p></div>
+              <div><div class="h">How I would track it</div><p class="tech">PostHog events, product funnels, and session replay to see why people drop, not just where</p></div>
+            </div>
+            <div class="band t3">Bottom of funnel · what becomes value</div>
+            <div class="detail">
+              <div><div class="h">Examples</div><p>Match made, payment, subscription, completed trip, repeat trip</p></div>
+              <div><div class="h">How I would track it</div><p class="tech">Stripe events, backend events, and clean records in the database or CRM</p></div>
+            </div>
           </div>
           <div class="callout indigo">
-            <span class="lab">Deliverable</span>
-            A founder dashboard we can open any morning, showing match rate, time to match, activation and retention, plus a first funnel report naming the single biggest leak. Decisions stop being opinions.
+            <span class="lab">Why the top layer wins us a marketing partner</span>
+            If we add one question at signup, "where did you hear about us," we get exact numbers on where people actually come from. Say 90 percent arrive from Instagram but only 10 percent of effort goes there. That is a concrete, valuable insight I can hand the marketing co-founder on day one, and it also improves the website by telling us which entry points to polish.
           </div>
+        </div>
+
+        <div class="sec reveal">
+          <h3 class="sh"><span class="s-num">2.2</span> Is event tracking and PostHog enough to start? Yes, and here is why</h3>
+          <p>The first layer does not need anything clever. We define a clean set of events and watch how many people make it from one step to the next. One concrete example makes it obvious.</p>
+          <div class="callout">
+            <span class="lab">The leak, made visible</span>
+            <p style="margin-bottom:10px">If 1,000 people arrive, 400 sign up, 180 verify ID, 90 create a Juurnee, 30 get matched and 12 pay, we instantly know where the biggest leak is.</p>
+            <div class="dropoff">
+              <span class="b">1000<small>arrive</small></span><span class="g">›</span>
+              <span class="b">400<small>sign up</small></span><span class="g">›</span>
+              <span class="b leak">180<small>verify ID</small></span><span class="g">›</span>
+              <span class="b">90<small>request</small></span><span class="g">›</span>
+              <span class="b">30<small>matched</small></span><span class="g">›</span>
+              <span class="b">12<small>pay</small></span>
+            </div>
+            <p style="margin-top:10px;font-size:14px">Here the biggest fall is at ID verification. That tells us exactly where to focus, and it is a number anyone on the team can read.</p>
+          </div>
+        </div>
+
+        <div class="sec reveal">
+          <h3 class="sh"><span class="s-num">2.3</span> What I would build at each layer</h3>
+          <div class="matrix-wrap">
+            <table class="simple">
+              <thead><tr><th>Layer</th><th>What we learn</th><th>Tech I would use</th></tr></thead>
+              <tbody>
+                <tr><th>Top</th><td>Which channels actually bring users</td><td>UTMs, GA, PostHog source, signup source question</td></tr>
+                <tr><th>Middle</th><td>Where users get stuck inside the product</td><td>PostHog events and funnels, session replay</td></tr>
+                <tr><th>Bottom</th><td>What converts into revenue and repeat use</td><td>Stripe and backend events, database records</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout indigo"><span class="lab">Deliverable</span>A founder dashboard you can open any morning, plus a first funnel report naming the single biggest leak. Decisions stop being opinions.</div>
         </div>
 
         <div class="pager">
-          <button data-goto="marketplace"><span class="pl">← Back</span>01 · The Marketplace</button>
-          <button class="next" data-goto="bridge"><span class="pl">Next →</span>03 · Business → Tech</button>
+          <button data-goto="marketplace"><span class="pl">Back</span>01 · The Marketplace</button>
+          <button class="next" data-goto="bridge"><span class="pl">Next</span>03 · Business to Tech</button>
         </div>
       </section>
 
@@ -536,51 +607,52 @@ table.simple tbody tr:hover{background:var(--paper)}
         <div class="reveal">
           <span class="eyebrow">The Synthesis</span>
           <h2 class="title">Every Business Problem, Mapped to a Technical Move</h2>
-          <p class="lede">This is the whole job in one view. I don't reach for technology for its own sake. Each row starts with a growth problem and ends with the build that addresses it, plus the metric that proves it worked.</p>
+          <p class="lede">Each row starts with a growth problem and ends with the build that addresses it, plus the number that would prove it worked.</p>
         </div>
 
         <div class="spacer sm reveal"></div>
 
         <div class="reveal">
           <div class="bridge-row">
-            <div class="biz"><span class="lab">Business problem</span><strong>We can't see where Seekers drop off.</strong><p>Decisions are opinion led, and we're guessing at the leaks.</p></div>
-            <div class="arrow">→</div>
+            <div class="biz"><span class="lab">Business problem</span><strong>We cannot see where Seekers drop off.</strong><p>Decisions are opinion led, and we are guessing at the leaks.</p></div>
+            <div class="arrow">so I<br>would<br>build</div>
             <div class="tech"><span class="lab">Technical move</span><strong>Event taxonomy and PostHog funnels</strong><p>Instrument both sides on the live app, plus a founder dashboard.</p><span class="out">↑ activation rate</span></div>
           </div>
           <div class="bridge-row">
             <div class="biz"><span class="lab">Business problem</span><strong>Match rate is low and matching is slow.</strong><p>Demand gets served late or not at all, which is silent churn.</p></div>
-            <div class="arrow">→</div>
+            <div class="arrow">so I<br>would<br>build</div>
             <div class="tech"><span class="lab">Technical move</span><strong>Own the matching logic on a real backend</strong><p>Faster matching and supply analytics, an early target if we rebuild.</p><span class="out">↑ match rate · ↓ time to match</span></div>
           </div>
           <div class="bridge-row">
-            <div class="biz"><span class="lab">Business problem</span><strong>Companions don't come back.</strong><p>Supply leaks faster than we refill it, and liquidity stalls.</p></div>
-            <div class="arrow">→</div>
+            <div class="biz"><span class="lab">Business problem</span><strong>Companions do not come back.</strong><p>Supply leaks faster than we refill it, and liquidity stalls.</p></div>
+            <div class="arrow">so I<br>would<br>build</div>
             <div class="tech"><span class="lab">Technical move</span><strong>Companion analytics and reputation features</strong><p>Track companion cohorts, build a trust and reputation surface.</p><span class="out">↑ companion retention</span></div>
           </div>
           <div class="bridge-row">
-            <div class="biz"><span class="lab">Business problem</span><strong>Trust friction at ID verification.</strong><p>KYC may be killing activation, but we don't know how much.</p></div>
-            <div class="arrow">→</div>
-            <div class="tech"><span class="lab">Technical move</span><strong>Measure KYC drop off, then streamline it</strong><p>Instrument first, optimise the verification flow once it's sized.</p><span class="out">↑ verification completion</span></div>
+            <div class="biz"><span class="lab">Business problem</span><strong>Trust friction at ID verification.</strong><p>KYC may be killing activation, but we do not know how much.</p></div>
+            <div class="arrow">so I<br>would<br>build</div>
+            <div class="tech"><span class="lab">Technical move</span><strong>Measure KYC drop-off, then streamline it</strong><p>Instrument first, optimise the verification flow once it is sized.</p><span class="out">↑ verification completion</span></div>
           </div>
           <div class="bridge-row">
-            <div class="biz"><span class="lab">Business problem</span><strong>Marketing can't test ideas fast.</strong><p>Every experiment waits in an engineering queue.</p></div>
-            <div class="arrow">→</div>
+            <div class="biz"><span class="lab">Business problem</span><strong>Marketing cannot test ideas fast.</strong><p>Every experiment waits in an engineering queue.</p></div>
+            <div class="arrow">so I<br>would<br>build</div>
             <div class="tech"><span class="lab">Technical move</span><strong>Feature flags and an experiment framework</strong><p>Self serve testing on landing, onboarding and pricing, no deploy needed.</p><span class="out">↑ experiment velocity</span></div>
           </div>
           <div class="bridge-row">
             <div class="biz"><span class="lab">Business problem</span><strong>Shipping takes too long, and a v2 already exists.</strong><p>Iteration speed caps how fast we plug the leaks we find.</p></div>
-            <div class="arrow">→</div>
+            <div class="arrow">so I<br>would<br>build</div>
             <div class="tech"><span class="lab">Technical move</span><strong>Audit v2, ship it safely, add CI/CD and tests</strong><p>Launch behind flags and rollback, rebuild only the risky parts.</p><span class="out">↓ feature lead time</span></div>
           </div>
         </div>
 
-        <div class="callout big indigo reveal">
-          The sentence this table is built to earn is "she understands my business as deeply as my product." Technology always in service of a number that matters.
+        <div class="callout indigo reveal">
+          <span class="lab">Why this table exists</span>
+          The purpose is to make trade-offs visible. Each technical decision should connect to a business outcome we can measure, so we are never building for its own sake.
         </div>
 
         <div class="pager">
-          <button data-goto="analytics"><span class="pl">← Back</span>02 · Analytics &amp; Signal</button>
-          <button class="next" data-goto="v2"><span class="pl">Next →</span>04 · The v2 Decision</button>
+          <button data-goto="analytics"><span class="pl">Back</span>02 · Funnel Visibility</button>
+          <button class="next" data-goto="v2"><span class="pl">Next</span>04 · The v2 Decision</button>
         </div>
       </section>
 
@@ -589,42 +661,38 @@ table.simple tbody tr:hover{background:var(--paper)}
         <div class="reveal">
           <span class="eyebrow">Part 2 · Recommendation · The Build</span>
           <h2 class="title">The v2 Decision</h2>
-          <p class="lede">A remake already exists in Claude Code and GitHub. That changes the question. It isn't "what stack should we build." It's "is the thing we already have safe to ship, and how do we launch it without breaking 16,000 people."</p>
+          <p class="lede">A remake already exists in Claude Code and GitHub. That changes the question. It is not "what stack should we build," it is "is the thing we already have safe to ship, and how do we launch it without breaking 16,000 people."</p>
         </div>
 
         <div class="sec reveal">
           <h3 class="sh"><span class="s-num">4.1</span> The v2 readiness verdict</h3>
-          <p>My first platform job is an audit, not a rebuild. It ends in one of three verdicts, and I'd be honest with you about which one we're in.</p>
+          <p>My first platform job is an audit, not a rebuild. It ends in one of three verdicts, and I would be honest with you about which one we are in.</p>
           <div class="spacer sm"></div>
-          <div class="verdict go">
-            <div class="vh"><span class="tag">VERDICT 1 · SHIP</span><h3>Ship v2</h3></div>
-            <p>If the build has clean architecture, working auth, payments, KYC and matching, sound admin flows, real tests and a working deploy path, then the best move is to ship it quickly behind a phased rollout. We don't gold plate a thing that already works.</p>
-          </div>
-          <div class="verdict guard">
-            <div class="vh"><span class="tag">VERDICT 2 · SHIP WITH GUARDRAILS</span><h3>Ship v2 carefully (the likely case)</h3></div>
-            <p>If it mostly works but has gaps, we launch behind feature flags to limited cohorts, with monitoring and instant rollback, and close the gaps in priority order while Bubble keeps serving everyone else. This is where most real codebases sit, and it's my default expectation until the audit says otherwise.</p>
-          </div>
-          <div class="verdict stop">
-            <div class="vh"><span class="tag">VERDICT 3 · HOLD</span><h3>Don't ship v2 yet</h3></div>
-            <p>If it has poor data modelling, insecure auth, broken payment flows, no testability or unclear ownership, then we treat it as a prototype, keep Bubble as the system of record, and rebuild only the risky parts rather than starting again.</p>
-          </div>
+          <div class="verdict go"><div class="vh"><span class="tag">VERDICT 1 · SHIP</span><h3>Ship v2</h3></div><p>If the build has clean architecture, working auth, payments, KYC and matching, sound admin flows, real tests and a working deploy path, the best move is to ship it quickly behind a phased rollout. We do not gold plate something that already works.</p></div>
+          <div class="verdict guard"><div class="vh"><span class="tag">VERDICT 2 · SHIP WITH GUARDRAILS</span><h3>Ship v2 carefully, the likely case</h3></div><p>If it mostly works but has gaps, we launch behind feature flags to limited cohorts, with monitoring and instant rollback, and close the gaps in priority order while Bubble keeps serving everyone else. This is where most real codebases sit.</p></div>
+          <div class="verdict stop"><div class="vh"><span class="tag">VERDICT 3 · HOLD</span><h3>Do not ship v2 yet</h3></div><p>If it has poor data modelling, insecure auth, broken payment flows, no testability or unclear ownership, we treat it as a prototype, keep Bubble as the system of record, and rebuild only the risky parts rather than starting again.</p></div>
         </div>
 
         <div class="sec reveal">
-          <h3 class="sh"><span class="s-num">4.2</span> What I'd audit to reach the verdict</h3>
-          <p>A code and architecture review against a fixed checklist, so the verdict is evidence, not vibes.</p>
-          <div class="grid c2" style="margin-top:6px">
-            <ul class="tick">
-              <li><strong>Data model.</strong> Is it sound and exportable, or grown organically?</li>
-              <li><strong>Auth and security.</strong> How are sessions, secrets and PII handled?</li>
-              <li><strong>Payments.</strong> Are flows correct, idempotent and tested?</li>
-              <li><strong>KYC.</strong> Does identity verification actually work end to end?</li>
+          <h3 class="sh"><span class="s-num">4.2</span> How I would review the v2 build</h3>
+          <p>This is the concrete, hands-on part. A code and architecture review against a fixed checklist, so the verdict is evidence rather than opinion, and so you can see I know what production ready actually means.</p>
+          <div class="spacer sm"></div>
+          <div class="grid c2">
+            <ul class="checks">
+              <li>Can I run it locally from the README?</li>
+              <li>Are environment variables documented and kept separate from secrets?</li>
+              <li>Is auth handled safely, with sessions and tokens done properly?</li>
+              <li>Are protected routes actually protected, server side?</li>
+              <li>Are Stripe webhooks verified against their signature?</li>
+              <li>Are payment actions idempotent so users cannot be charged twice?</li>
             </ul>
-            <ul class="tick">
-              <li><strong>Matching and admin.</strong> Is the core logic there and operable?</li>
-              <li><strong>Tests and deploy.</strong> Is there coverage and a path to production?</li>
-              <li><strong>Ownership.</strong> Who built it, is it documented, can we maintain it?</li>
-              <li><strong>Data migration.</strong> Can 16,000 users move across cleanly?</li>
+            <ul class="checks">
+              <li>Is KYC and personal data stored and encrypted safely?</li>
+              <li>Are database permissions and row level access correct?</li>
+              <li>Are there tests for auth, payments, KYC and matching?</li>
+              <li>Is there error logging and monitoring, through Sentry or similar?</li>
+              <li>Is there a staging environment before production?</li>
+              <li>Can we roll back if a launch fails, and is there a clean data path from Bubble?</li>
             </ul>
           </div>
         </div>
@@ -636,8 +704,8 @@ table.simple tbody tr:hover{background:var(--paper)}
             <li><strong>Keep Bubble live</strong> until v2 has earned its place. No cliff edge.</li>
             <li><strong>Phased rollout by cohort,</strong> behind feature flags, watching the metrics at each step.</li>
             <li><strong>Instant rollback.</strong> If a flow regresses, we flip the flag back. Nothing is one way.</li>
-            <li><strong>Parallel run on the data layer,</strong> with a clean canonical store both systems agree on.</li>
-            <li><strong>No feature freeze.</strong> We keep shipping to users throughout. The commercial constraint drives the technical plan.</li>
+            <li><strong>Parallel run on the data layer,</strong> with a clean store both systems agree on.</li>
+            <li><strong>No feature freeze.</strong> We keep shipping to users throughout.</li>
           </ul>
         </div>
 
@@ -661,12 +729,12 @@ table.simple tbody tr:hover{background:var(--paper)}
               </tbody>
             </table>
           </div>
-          <div class="callout indigo"><span class="lab">Reading it</span><strong>B wins at 425.</strong> Shipping v2 as is (A) is fastest but takes a real hit on continuity risk with 16,000 live users. Holding and rebuilding (C) is close behind and is the right answer if the audit comes back ugly. Guardrails win because they capture most of v2's speed while keeping the downside contained. The audit decides which column we're actually in.</div>
+          <div class="callout indigo"><span class="lab">Reading it</span>B wins at 425. Shipping v2 as is (A) is fastest but takes a real hit on continuity risk with 16,000 live users. Holding and rebuilding (C) is close behind, and is the right answer if the audit comes back ugly. Guardrails win because they capture most of v2's speed while keeping the downside contained. The audit decides which column we are actually in.</div>
         </div>
 
         <div class="pager">
-          <button data-goto="bridge"><span class="pl">← Back</span>03 · Business → Tech</button>
-          <button class="next" data-goto="vision"><span class="pl">Next →</span>05 · Product Vision</button>
+          <button data-goto="bridge"><span class="pl">Back</span>03 · Business to Tech</button>
+          <button class="next" data-goto="vision"><span class="pl">Next</span>05 · Product Vision</button>
         </div>
       </section>
 
@@ -674,30 +742,35 @@ table.simple tbody tr:hover{background:var(--paper)}
       <section class="page" id="vision">
         <div class="reveal">
           <span class="eyebrow">The Future</span>
-          <h2 class="title">What Juurnee Could Become</h2>
-          <p class="lede">Founders and investors think in futures. A technical co-founder's job is to make today's decisions keep the biggest futures open, which is itself a reason to own the trust and identity layer.</p>
-        </div>
-
-        <div class="spacer sm reveal"></div>
-        <div class="grid c3 reveal">
-          <div class="horizon"><span class="when">Today</span><h3>Travel assistance marketplace</h3><p>Seekers find ID verified Companions for a single trip. Match, complete, review.</p></div>
-          <div class="horizon"><span class="when">About 3 years</span><h3>Global travel support network</h3><p>Dense liquidity across major routes, with family, elderly and accessibility travel as distinct, trusted verticals.</p></div>
-          <div class="horizon future"><span class="when">About 5 years</span><h3>Trusted travel identity and assistance platform</h3><p>A reputation and identity layer that others build on, the default trust rail for assisted travel.</p></div>
+          <h2 class="title">Where This Could Go</h2>
+          <p class="lede">I cannot promise a five year roadmap on day one. But the technical choices we make now either keep big futures open or quietly close them, so it is worth being explicit about the direction, and what each stage needs from the platform.</p>
         </div>
 
         <div class="sec reveal">
-          <h3 class="sh"><span class="s-num">5.1</span> The surfaces that get us there</h3>
-          <div class="grid c3">
-            <div class="card"><h3 style="font-size:16px">Verticals</h3><ul class="tick" style="margin-top:8px"><li>Airport assistance</li><li>Family travel support</li><li>Disability travel support</li></ul></div>
-            <div class="card"><h3 style="font-size:16px">Network and trust</h3><ul class="tick" style="margin-top:8px"><li>Companion reputation network</li><li>Verified identity layer</li><li>Reviews and safety record</li></ul></div>
-            <div class="card"><h3 style="font-size:16px">Partnerships</h3><ul class="tick" style="margin-top:8px"><li>Insurance partnerships</li><li>Airline partnerships</li><li>Assisted travel referrals</li></ul></div>
+          <h3 class="sh"><span class="s-num">5.1</span> A staged timeline, with platform implications</h3>
+          <div class="timeline">
+            <div class="tl"><div class="when">Now</div><h4>Make the marketplace visible and ship v2 safely</h4><p>Analytics live, v2 audited, rollout behind flags with Bubble still serving users.</p><div class="impl"><b>Platform implication:</b> clean event tracking and a feature flag system, the foundations everything else builds on.</div></div>
+            <div class="tl"><div class="when">3 months</div><h4>Improve activation, matching and trust</h4><p>Use the funnel data to fix the biggest leak, speed up matching, and reduce KYC friction.</p><div class="impl"><b>Platform implication:</b> own the matching logic and the trust data on a real backend, not locked inside Bubble.</div></div>
+            <div class="tl"><div class="when">12 months</div><h4>Reliable route liquidity and repeat use</h4><p>Dense supply on core routes, Companions and Seekers coming back.</p><div class="impl"><b>Platform implication:</b> reputation, cohort and retention data modelled properly so growth decisions are data led.</div></div>
+            <div class="tl"><div class="when">3 years</div><h4>A trusted assisted travel network</h4><p>Family, elderly and accessibility travel as distinct, trusted verticals.</p><div class="impl"><b>Platform implication:</b> a verified identity and reputation layer that can be extended per vertical.</div></div>
+            <div class="tl"><div class="when">5 years</div><h4>Travel support infrastructure</h4><p>The default trust rail for assisted travel, with partners building on top.</p><div class="impl"><b>Platform implication:</b> audit logs, identity and trust data robust enough for airline and insurance partners to rely on.</div></div>
           </div>
-          <div class="callout"><span class="lab">Why this is a CTO question, not only a CEO one</span>The five year version only works if we own the identity and reputation data, which is exactly why moving the trust critical flows off Bubble matters more than the cosmetic ones. Vision shapes sequencing.</div>
+        </div>
+
+        <div class="sec reveal">
+          <h3 class="sh"><span class="s-num">5.2</span> Future features, tied back to the two problems you raised</h3>
+          <p>None of this is a distraction from the brief. Each future feature traces back to either platform agility or analytics visibility, the two problems you named.</p>
+          <div class="grid c2">
+            <div class="horizon"><h3>Companion reputation network</h3><p style="font-size:14px">Drives retention and trust. Needs identity and audit data captured cleanly now, which is part of the analytics work, not extra to it.</p></div>
+            <div class="horizon"><h3>Airline and insurance partnerships</h3><p style="font-size:14px">A real revenue path later. If we want it, we need reliable identity, reputation, audit logs and trust data starting now. Vision shapes what we migrate first.</p></div>
+            <div class="horizon"><h3>Smart, real time matching</h3><p style="font-size:14px">Lifts match rate and cuts wait times. Needs the owned backend from the agility work, which is exactly why we move matching off Bubble early.</p></div>
+            <div class="horizon"><h3>Self serve experiments for marketing</h3><p style="font-size:14px">Lets growth move without an engineering queue. It is the feature flag and analytics layer again, reused, so the agility investment pays twice.</p></div>
+          </div>
         </div>
 
         <div class="pager">
-          <button data-goto="v2"><span class="pl">← Back</span>04 · The v2 Decision</button>
-          <button class="next" data-goto="judgement"><span class="pl">Next →</span>06 · Risks &amp; What Would Change</button>
+          <button data-goto="v2"><span class="pl">Back</span>04 · The v2 Decision</button>
+          <button class="next" data-goto="judgement"><span class="pl">Next</span>06 · Risks &amp; What Would Change</button>
         </div>
       </section>
 
@@ -706,15 +779,15 @@ table.simple tbody tr:hover{background:var(--paper)}
         <div class="reveal">
           <span class="eyebrow">Judgement</span>
           <h2 class="title">Risks, and What Would Change My Mind</h2>
-          <p class="lede">A plan with no stated risks is a plan I don't trust. Here is where I think I could be wrong, and the findings that would move me off this recommendation. I'm committed to the goal, which is marketplace growth, not to any one technical path.</p>
+          <p class="lede">A plan with no stated risks is a plan I do not trust. Here is where I think I could be wrong, and the findings that would move me off this recommendation. I am committed to the goal, which is marketplace growth, not to any one technical path.</p>
         </div>
 
         <div class="sec reveal">
           <h3 class="sh"><span class="s-num">6.1</span> The honest risks in my recommendation</h3>
           <div class="grid c2">
-            <div class="risk"><span class="n">1</span><h3>The problem might not be technical</h3><p>Analytics could show people simply don't want the product enough yet. More engineering won't fix demand, so I want to know this early, before we invest in a rebuild.</p></div>
-            <div class="risk"><span class="n">2</span><h3>v2 code quality could be poor</h3><p>The remake might need substantial rework. If the audit finds insecure auth or broken payments, my timeline stretches and the honest move is to say so, not to ship on hope.</p></div>
-            <div class="risk"><span class="n">3</span><h3>Liquidity could be the real bottleneck</h3><p>If we're short on Companions on key routes, code doesn't create supply. The fix becomes a growth and operations problem, and the marketing co-founder leads it, not me.</p></div>
+            <div class="risk"><span class="n">1</span><h3>The problem might not be technical</h3><p>Analytics could show people simply do not want the product enough yet. More engineering will not fix demand, so I want to know this early, before we invest in a rebuild.</p></div>
+            <div class="risk"><span class="n">2</span><h3>v2 code quality could be poor</h3><p>The remake might need substantial rework. If the audit finds insecure auth or broken payments, my timeline stretches, and the honest move is to say so, not to ship on hope.</p></div>
+            <div class="risk"><span class="n">3</span><h3>Liquidity could be the real bottleneck</h3><p>If we are short on Companions on key routes, code does not create supply. The fix becomes a growth and operations problem, and the marketing co-founder leads it, not me.</p></div>
             <div class="risk"><span class="n">4</span><h3>Migration could distract from growth</h3><p>Any replatforming pulls focus. Without strict sequencing it can quietly stall acquisition and retention, so it has to stay subordinate to the commercial goal.</p></div>
           </div>
           <div class="callout indigo"><span class="lab">The point of month one</span>The whole purpose of the first month is to shrink these uncertainties before we make any large, expensive or hard to reverse commitment.</div>
@@ -722,7 +795,7 @@ table.simple tbody tr:hover{background:var(--paper)}
 
         <div class="sec reveal">
           <h3 class="sh"><span class="s-num">6.2</span> What would change my recommendation</h3>
-          <p>If the evidence comes back differently, so does the plan. That isn't indecision, it's the opposite of being attached to a solution.</p>
+          <p>If the evidence comes back differently, so does the plan. The strongest technical co-founder is not the one who defends their first answer, it is the one who updates quickly when the evidence changes.</p>
           <div class="spacer sm"></div>
           <div class="scenario"><div class="if"><span class="lab">If</span><b>v2 is genuinely production ready</b></div><div class="arr">→</div><div class="then"><span class="lab">Then</span>Accelerate the rollout. Spend less time hedging and ship sooner.</div></div>
           <div class="scenario"><div class="if"><span class="lab">If</span><b>Bubble is actually performing well</b></div><div class="arr">→</div><div class="then"><span class="lab">Then</span>Stay on it longer and put the energy into growth and analytics instead.</div></div>
@@ -731,8 +804,8 @@ table.simple tbody tr:hover{background:var(--paper)}
         </div>
 
         <div class="pager">
-          <button data-goto="vision"><span class="pl">← Back</span>05 · Product Vision</button>
-          <button class="next" data-goto="plan"><span class="pl">Next →</span>07 · First 7 Days &amp; 90 Days</button>
+          <button data-goto="vision"><span class="pl">Back</span>05 · Product Vision</button>
+          <button class="next" data-goto="plan"><span class="pl">Next</span>07 · First 7 Days &amp; 90 Days</button>
         </div>
       </section>
 
@@ -741,17 +814,17 @@ table.simple tbody tr:hover{background:var(--paper)}
         <div class="reveal">
           <span class="eyebrow">Execution</span>
           <h2 class="title">First 7 Days, Then 90</h2>
-          <p class="lede">Everybody writes a 30, 60, 90. Fewer people tell you what happens on Monday. Since you're a founder, here's the first week first, then the shape of the quarter.</p>
+          <p class="lede">Plenty of people write a 30, 60, 90. Fewer tell you what happens on Monday. Since you are a founder, here is the first week first, then the shape of the quarter.</p>
         </div>
 
         <div class="sec reveal">
           <h3 class="sh"><span class="s-num">7.1</span> My first week, day by day</h3>
           <div class="days">
-            <div class="day"><span class="dd">Monday</span><p>Get access to everything. Bubble, the v2 repo and GitHub, analytics, payments and KYC dashboards.</p></div>
-            <div class="day"><span class="dd">Tuesday</span><p>Audit the architecture. Walk the v2 build and the Bubble setup against the checklist.</p></div>
+            <div class="day"><span class="dd">Monday</span><p>Get access to everything. Bubble, the v2 repo and GitHub, analytics, payments and KYC.</p></div>
+            <div class="day"><span class="dd">Tuesday</span><p>Audit the architecture. Walk the v2 build and Bubble against the review checklist.</p></div>
             <div class="day"><span class="dd">Wednesday</span><p>Install analytics. Define the event taxonomy and start firing the core events.</p></div>
-            <div class="day"><span class="dd">Thursday</span><p>Walk the real user journeys, both Seeker and Companion, and note where they break.</p></div>
-            <div class="day"><span class="dd">Friday</span><p>Share findings with you. Early read on v2, the biggest leak, and what week two does.</p></div>
+            <div class="day"><span class="dd">Thursday</span><p>Walk the real user journeys, Seeker and Companion, and note where they break.</p></div>
+            <div class="day"><span class="dd">Friday</span><p>Share findings with you. Early read on v2, the biggest leak, and the week two plan.</p></div>
           </div>
         </div>
 
@@ -765,7 +838,7 @@ table.simple tbody tr:hover{background:var(--paper)}
         <div class="sec reveal">
           <h3 class="sh"><span class="s-num">7.3</span> Months 2 and 3</h3>
           <div class="grid c2">
-            <div class="card"><h3>Month 2, de-risk and build foundations</h3><ul class="tick" style="margin-top:8px"><li>CI/CD, staging, monitoring and a canonical data layer</li><li>Close the top v2 gaps, or start the first off Bubble feature</li><li>Validate the strategy against real funnel data</li></ul></div>
+            <div class="card"><h3>Month 2, de-risk and build foundations</h3><ul class="tick" style="margin-top:8px"><li>CI/CD, staging, monitoring and a clean data layer</li><li>Close the top v2 gaps, or start the first off Bubble feature</li><li>Validate the strategy against real funnel data</li></ul></div>
             <div class="card"><h3>Month 3, ship and set the rhythm</h3><ul class="tick" style="margin-top:8px"><li>First v2 flow live to a cohort behind a flag</li><li>Growth operating cadence running (section 08)</li><li>Experiment framework in marketing's hands</li></ul></div>
           </div>
         </div>
@@ -774,7 +847,7 @@ table.simple tbody tr:hover{background:var(--paper)}
           <div class="capstone">
             <span class="eyebrow" style="color:var(--amber)">The one slide</span>
             <h3>If I joined Monday</h3>
-            <p style="color:rgba(255,255,255,.82);max-width:60ch">So you know exactly what you'd get, and when.</p>
+            <p style="color:rgba(255,255,255,.82);max-width:60ch">So you know exactly what you would get, and when.</p>
             <div class="cols">
               <div class="col"><h5>Week 1</h5><ul><li>Marketplace metrics dashboard</li><li>Analytics instrumentation plan</li><li>Technical audit summary</li><li>v2 readiness assessment</li></ul></div>
               <div class="col"><h5>Month 1</h5><ul><li>Funnel visibility, live</li><li>Activation report</li><li>Ship or rebuild recommendation</li><li>Product roadmap</li></ul></div>
@@ -784,12 +857,12 @@ table.simple tbody tr:hover{background:var(--paper)}
         </div>
 
         <div class="pager">
-          <button data-goto="judgement"><span class="pl">← Back</span>06 · Risks &amp; What Would Change</button>
-          <button class="next" data-goto="growthos"><span class="pl">Next →</span>08 · Working Together</button>
+          <button data-goto="judgement"><span class="pl">Back</span>06 · Risks &amp; What Would Change</button>
+          <button class="next" data-goto="growthos"><span class="pl">Next</span>08 · Working Together</button>
         </div>
       </section>
 
-      <!-- 08 · GROWTH OS -->
+      <!-- 08 · WORKING TOGETHER -->
       <section class="page" id="growthos">
         <div class="reveal">
           <span class="eyebrow">Execution · Partnership</span>
@@ -798,50 +871,65 @@ table.simple tbody tr:hover{background:var(--paper)}
         </div>
 
         <div class="sec reveal">
-          <h3 class="sh"><span class="s-num">8.1</span> The weekly exchange</h3>
-          <p>Every week, a two way trade. Neither of us works in a vacuum.</p>
-          <div class="grid c2" style="margin-top:14px">
-            <div class="card"><span class="pill warn">they bring</span><h3 style="margin-top:10px">Marketing to me</h3><ul class="tick" style="margin-top:8px"><li>Acquisition numbers and CAC by channel</li><li>Campaign results</li><li>Customer interviews and the customer's actual words</li><li>Prioritised, evidence backed hypotheses</li></ul></div>
-            <div class="card"><span class="pill indigo">I bring</span><h3 style="margin-top:10px">Me to marketing</h3><ul class="tick" style="margin-top:8px"><li>Funnel analysis and the biggest leaks</li><li>Experiment results</li><li>Product and behavioural insight</li><li>Retention and cohort analysis</li></ul></div>
+          <h3 class="sh"><span class="s-num">8.1</span> Who owns what</h3>
+          <div class="matrix-wrap">
+            <table class="simple">
+              <thead><tr><th>Marketing owns</th><th>I own</th><th>We share</th></tr></thead>
+              <tbody>
+                <tr><td>Acquisition</td><td>Platform and infrastructure</td><td>Activation</td></tr>
+                <tr><td>Content and brand</td><td>Architecture and reliability</td><td>Retention</td></tr>
+                <tr><td>Partnerships</td><td>Data and instrumentation</td><td>Conversion and experiments</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="sec reveal">
+          <h3 class="sh"><span class="s-num">8.2</span> The weekly exchange</h3>
+          <div class="grid c2" style="margin-top:6px">
+            <div class="card"><span class="pill warn">they bring</span><h3 style="margin-top:10px">Marketing</h3><ul class="tick" style="margin-top:8px"><li>CAC and acquisition by channel</li><li>Campaign results</li><li>Customer interviews and feedback</li><li>New hypotheses</li></ul></div>
+            <div class="card"><span class="pill indigo">I bring</span><h3 style="margin-top:10px">Me as the CTO</h3><ul class="tick" style="margin-top:8px"><li>Funnel data and the biggest leaks</li><li>User behaviour and product performance</li><li>Experiment results</li><li>Retention and cohort analysis</li></ul></div>
           </div>
           <p style="margin-top:14px">Then together we pick the biggest bottleneck, the biggest opportunity, and the next experiment. That meeting is the company's steering wheel.</p>
-        </div>
-
-        <div class="sec reveal">
-          <h3 class="sh"><span class="s-num">8.2</span> The loop we both serve</h3>
-          <div class="loop">
-            <span class="node">Acquisition</span><span class="arr">→</span>
-            <span class="node">Activation</span><span class="arr">→</span>
-            <span class="node alt">Matching</span><span class="arr">→</span>
-            <span class="node">Trip completion</span><span class="arr">→</span>
-            <span class="node">Retention</span><span class="arr">→</span>
+          <div class="loop" style="margin-top:16px">
+            <span class="node">Acquisition</span><span class="arr">›</span>
+            <span class="node">Activation</span><span class="arr">›</span>
+            <span class="node alt">Matching</span><span class="arr">›</span>
+            <span class="node">Trip completion</span><span class="arr">›</span>
+            <span class="node">Retention</span><span class="arr">›</span>
             <span class="node alt">Referral</span>
           </div>
-          <p class="loopnote">Referral feeds back into acquisition. Close the loop and growth compounds. Marketing owns the ends, I own the instrumentation and the matching core in the middle, and we share the metrics across all of it.</p>
+          <p class="loopnote">Referral feeds back into acquisition. Close the loop and growth compounds.</p>
         </div>
 
         <div class="sec reveal">
-          <h3 class="sh"><span class="s-num">8.3</span> Prioritising together, and what healthy looks like</h3>
+          <h3 class="sh"><span class="s-num">8.3</span> My experience relevant to this</h3>
           <div class="grid c2">
-            <div class="card"><h3>One backlog, scored openly</h3><p>A single list scored with RICE. They own reach and impact, I own effort and feasibility. Growth work and tech debt sit in the same list, so there's never a hidden engineering tax.</p></div>
-            <div class="card"><h3>One cadence, one scoreboard</h3><p>A weekly sync against one north star metric and its inputs. Trade-offs made visible in the room. When we disagree, the data and the weights break the tie, not seniority.</p></div>
+            <div class="card">
+              <ul class="tick">
+                <li>I have worked across technical builds, tutoring, automation, and explaining complex systems simply.</li>
+                <li>I am used to translating messy, human problems into structured systems and clear decisions.</li>
+                <li>I naturally think in dashboards, workflows and decision systems, which is most of this role.</li>
+              </ul>
+            </div>
+            <div class="card">
+              <p>The best team I have been part of was together for only twelve weeks, and it went extraordinarily well. A lot of that came down to trust. When people actually know each other, feedback gets honest without anyone worrying how it will land, and everyone stays transparent about where their work really is, because it feels like a shared effort and not a contest. I would want to build that here, including some informal time together, and I would never force it.</p>
+            </div>
           </div>
         </div>
 
         <div class="sec reveal">
-          <h3 class="sh"><span class="s-num">8.4</span> One thing I'd ask for, gently</h3>
-          <div class="note">
-            <span class="q">&ldquo;</span>
-            <p>Beyond the operating rhythm, there's something I'd genuinely value, and I'd never force it because everyone has a life outside work and I respect that completely. I'd love for the three of us to get out together every so often, maybe once a month, nothing formal.</p>
-            <p>The best team I've been part of was together for only twelve weeks, and it went extraordinarily well. A lot of that came down to the fact that we actually knew each other. When you're in sync as people, two things get easier. You give each other honest feedback without spending energy worrying about whether it'll land the wrong way. And you stay transparent about where your work really is, because it feels like a shared effort rather than a quiet contest to be the one who looks best.</p>
-            <p>I've seen first hand how much faster a team moves when that trust is already there, so it's something I'd want to build with you and the wider team from early on.</p>
-            <p class="sig">Anisha</p>
+          <h3 class="sh"><span class="s-num">8.4</span> Three suggestions from my end</h3>
+          <div class="grid c3">
+            <div class="stepcard"><div class="n">01</div><h4>One weekly growth review</h4><p>A short shared meeting against one north star metric and its inputs.</p></div>
+            <div class="stepcard"><div class="n">02</div><h4>One prioritised backlog</h4><p>Growth work and tech debt on the same list, scored openly with RICE.</p></div>
+            <div class="stepcard"><div class="n">03</div><h4>One shared dashboard</h4><p>A single source of truth that you, marketing and I all trust.</p></div>
           </div>
         </div>
 
         <div class="pager">
-          <button data-goto="plan"><span class="pl">← Back</span>07 · First 7 Days &amp; 90 Days</button>
-          <button class="next" data-goto="deck"><span class="pl">Next →</span>09 · The Deck</button>
+          <button data-goto="plan"><span class="pl">Back</span>07 · First 7 Days &amp; 90 Days</button>
+          <button class="next" data-goto="deck"><span class="pl">Next</span>09 · The Deck</button>
         </div>
       </section>
 
@@ -854,22 +942,25 @@ table.simple tbody tr:hover{background:var(--paper)}
         </div>
         <div class="spacer sm reveal"></div>
         <div class="embed-frame reveal">
-          <!-- Canva: Share, More, Embed, copy the iframe src. Google Slides: File, Share, Publish to web, Embed. -->
-          <div class="embed-placeholder">
-            <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="13" rx="2" stroke="#fff" stroke-width="2"/><path d="M8 21h8M12 17v4" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div>
-            <h3 style="font-size:20px">Embed your deck here</h3>
-            <p style="max-width:46ch">Build it in Canva (Template 2, reskinned to Juurnee indigo and amber), then paste its embed link into the iframe in this section.</p>
-            <p style="font-family:var(--mono);font-size:12px;color:var(--ink-3)">Canva, Share, Embed, copy iframe src</p>
-          </div>
-          <!-- <iframe src="PASTE_EMBED_URL_HERE" allowfullscreen loading="lazy"></iframe> -->
+          <iframe
+            src="https://docs.google.com/presentation/d/1Tl0tZuWlz4eVfxtiYju5UjznpH84dbkj/embed?start=false&loop=false&delayms=3000"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
         </div>
-        <div class="callout reveal">
-          <span class="lab">Business first 9 slide spine</span>
-          1 · Title, "grow the marketplace, the platform is how" &nbsp;|&nbsp; 2 · The metrics we can't see &nbsp;|&nbsp; 3 · Marketplace health dashboard &nbsp;|&nbsp; 4 · Business to tech bridge &nbsp;|&nbsp; 5 · The v2 readiness verdict &nbsp;|&nbsp; 6 · Risks and what would change my mind &nbsp;|&nbsp; 7 · If I joined Monday &nbsp;|&nbsp; 8 · Working together &nbsp;|&nbsp; 9 · Product vision.
+        <div class="callout indigo reveal">
+          <span class="lab">How to use this case study</span>
+          <ul class="tick" style="margin-top:8px">
+            <li>Start with the <a data-page="summary" class="goto">Executive Summary</a> for the recommendation.</li>
+            <li><a data-page="marketplace" class="goto">The Marketplace</a> and <a data-page="analytics" class="goto">Funnel Visibility</a> explain the business diagnosis.</li>
+            <li><a data-page="v2" class="goto">The v2 Decision</a> is the technical recommendation.</li>
+            <li><a data-page="plan" class="goto">First 7 Days</a> shows what I would do immediately.</li>
+            <li>The <a data-page="appendix" class="goto">Appendix</a> holds the supporting evidence and proof of how I work.</li>
+          </ul>
         </div>
         <div class="pager">
-          <button data-goto="growthos"><span class="pl">← Back</span>08 · Working Together</button>
-          <button class="next" data-goto="appendix"><span class="pl">Next →</span>10 · Appendix</button>
+          <button data-goto="growthos"><span class="pl">Back</span>08 · Working Together</button>
+          <button class="next" data-goto="appendix"><span class="pl">Next</span>10 · Appendix &amp; Evidence</button>
         </div>
       </section>
 
@@ -877,23 +968,22 @@ table.simple tbody tr:hover{background:var(--paper)}
       <section class="page" id="appendix">
         <div class="reveal">
           <span class="eyebrow">Reference</span>
-          <h2 class="title">Appendix and Analysis</h2>
-          <p class="lede">The working behind the answer. Business analysis first, then the planning behind it, then the technical evidence. Detail for anyone who wants it. The decision doesn't depend on reading it.</p>
+          <h2 class="title">Appendix and Evidence</h2>
+          <p class="lede">The working behind the answer, the supporting evidence, and a few things I have built so you can see how I actually operate. None of this is needed to follow the recommendation.</p>
         </div>
 
         <div class="sec reveal">
           <h3 class="sh"><span class="s-num">A.1</span> How I planned this</h3>
-          <p>So you can see how I think, not just what I concluded, here is the planning document I worked from while putting this together.</p>
+          <p>So you can see how I think, not just what I concluded, here is the planning document I worked from.</p>
+
           <div class="spacer sm"></div>
+
           <div class="embed-frame doc">
-            <!-- Embed your planning doc. Google Docs: File, Share, Publish to web, Embed. Notion: Share, Publish, then use the page URL in the iframe. -->
-            <div class="embed-placeholder">
-              <div class="ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><path d="M13 3v6h6M9 13h6M9 17h6" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div>
-              <h3 style="font-size:20px">Embed your planning document here</h3>
-              <p style="max-width:46ch">Drop in the Google Doc or Notion page where you mapped out this analysis, so they can see your process.</p>
-              <p style="font-family:var(--mono);font-size:12px;color:var(--ink-3)">Google Docs, File, Share, Publish to web, Embed</p>
-            </div>
-            <!-- <iframe src="PASTE_PLANNING_DOC_EMBED_URL" loading="lazy"></iframe> -->
+            <iframe
+              src="https://docs.google.com/document/d/11Klhd7sFvbOqyvxngCvDDMHI63RdGr0vlrt9KPWj7yg/preview"
+              loading="lazy"
+              title="Juurnee planning document">
+            </iframe>
           </div>
         </div>
 
@@ -901,38 +991,39 @@ table.simple tbody tr:hover{background:var(--paper)}
           <h3 class="sh"><span class="s-num">A.2</span> Marketplace metric definitions</h3>
           <div class="matrix-wrap">
             <table class="simple">
-              <thead><tr><th>Metric</th><th>Definition we'd standardise on</th></tr></thead>
+              <thead><tr><th>Metric</th><th>Definition we would standardise on</th></tr></thead>
               <tbody>
                 <tr><th>Match rate</th><td>Requests matched to a Companion divided by total requests created, over a window</td></tr>
                 <tr><th>Time to match</th><td>Median and p90 hours from request created to match confirmed</td></tr>
                 <tr><th>Companion liquidity</th><td>Active verified Companions divided by open requests, by route and week</td></tr>
                 <tr><th>Repeat booking rate</th><td>Seekers with two or more completed trips divided by Seekers with one or more</td></tr>
-                <tr><th>Referral rate</th><td>New verified users attributable to an existing user's referral</td></tr>
-                <tr><th>Revenue per trip</th><td>Net revenue divided by completed trips, the unit economics anchor</td></tr>
+                <tr><th>Revenue per trip</th><td>Net revenue divided by completed trips</td></tr>
               </tbody>
             </table>
           </div>
         </div>
 
         <div class="sec reveal">
-          <h3 class="sh"><span class="s-num">A.3</span> Target architecture, hybrid state</h3>
-          <p>Where a safe v2 rollout lands us. Bubble shrinking, the owned stack growing, one data layer both agree on.</p>
-          <div class="card" style="margin-top:14px;font-family:var(--mono);font-size:13px;line-height:1.9;color:var(--ink-2);overflow-x:auto">
-            <div style="white-space:pre">
- Users ─┬─► [ Bubble app ]──┐        (legacy flows, shrinking)
-        │                    ├──► [ Canonical data layer ]
-        └─► [ v2 app ]───────┘        Postgres / Supabase
-                  │                   + typed API
-                  ├─ CI/CD · staging · tests · monitoring
-                  └─ PostHog events ──► funnels · retention · flags
-            </div>
+          <h3 class="sh"><span class="s-num">A.3</span> Target architecture, the safe rollout</h3>
+          <p>This is a rollout sequence, not a brand new architecture invented before seeing the repo. It keeps Bubble live and only retires it once v2 proves stable.</p>
+          <div class="flow">
+            <div class="node live">Bubble v1 stays live</div>
+            <div class="down">↓</div>
+            <div class="node">v2 app reviewed and deployed behind flags</div>
+            <div class="down">↓</div>
+            <div class="node">PostHog tracks both v1 and v2</div>
+            <div class="down">↓</div>
+            <div class="node">Canonical data layer or migration bridge</div>
+            <div class="down">↓</div>
+            <div class="node">Gradual cohort rollout</div>
+            <div class="down">↓</div>
+            <div class="node end">Bubble retired only once v2 proves stable</div>
           </div>
-          <p style="font-size:13px;color:var(--ink-3);margin-top:10px">Feature flags route each cohort between Bubble and v2. The data layer keeps both consistent, so the rollout is per flow and reversible.</p>
         </div>
 
         <div class="sec reveal">
           <h3 class="sh"><span class="s-num">A.4</span> Front-end health check, Lighthouse</h3>
-          <p>Supporting evidence only. The front end is the least important layer of the diagnosis, included for completeness. Captured 1 June 2026 on the live app, Lighthouse 13.0.2, emulated Moto G Power, slow 4G, single cold load.</p>
+          <p>Supporting evidence only. The front end is the least important layer of the diagnosis. Captured 1 June 2026 on the live app, Lighthouse 13.0.2, emulated Moto G Power, slow 4G, single cold load.</p>
           <div class="spacer sm"></div>
           <div class="grid c4">
             <div class="metric"><div class="v bad">51</div><div class="l">Performance</div></div>
@@ -942,23 +1033,64 @@ table.simple tbody tr:hover{background:var(--paper)}
           </div>
           <div class="callout">
             <span class="lab">What it actually tells us</span>
-            The worst offenders, render blocking of about 8.3 seconds, 693 KiB of unused JavaScript and legacy JavaScript, are largely Bubble's generated output, which we can't fix without leaving the platform. So this isn't "the page is slow," it's quiet evidence the platform caps our ceiling. One caveat, this is a single throttled mobile run near worst case, so I'd want real user field data before sizing any work. A useful detail, live tooling showed a layout shift score of 0.37 under interaction versus 0 on a cold load, which is why field data matters. Cheap wins exist too, like missing image alt text, unlabelled buttons and an empty meta description, which also help the assistive technology users Juurnee exists to serve.
+            The worst offenders, render blocking of about 8.3 seconds, 693 KiB of unused JavaScript and legacy JavaScript, are largely Bubble's generated output, which we cannot fix without leaving the platform. So this is not "the page is slow," it is quiet evidence the platform caps our ceiling. One caveat, this is a single throttled mobile run near worst case, so I would want real user field data before sizing any work. Cheap wins exist too, like missing image alt text, unlabelled buttons and an empty meta description, which also help the assistive technology users Juurnee exists to serve.
           </div>
-        </div>
+          <div class="embed-frame doc" style="margin-top:10px">
+            <iframe
+              src="./lighthouse%20analysis.pdf"
+              loading="lazy"
+              title="Juurnee Lighthouse analysis PDF">
+            </iframe>
+          </div>
 
         <div class="sec reveal">
-          <h3 class="sh"><span class="s-num">A.5</span> Glossary for non-technical reading</h3>
-          <div class="grid c2">
-            <div class="card"><h3 style="font-size:16px">Feature flag</h3><p style="font-size:14px">A switch that turns a feature on for some users without a new release, so we can roll out gradually and roll back instantly.</p></div>
-            <div class="card"><h3 style="font-size:16px">Liquidity</h3><p style="font-size:14px">Whether there's enough supply (Companions) to serve demand (Seekers) quickly. Low liquidity means long waits, which means churn.</p></div>
-            <div class="card"><h3 style="font-size:16px">PostHog</h3><p style="font-size:14px">A product analytics tool with funnels, retention, session replay and feature flags. It bolts onto the current app today.</p></div>
-            <div class="card"><h3 style="font-size:16px">RICE</h3><p style="font-size:14px">A way to score what to build next, using reach, impact, confidence and effort. It turns prioritising into a shared, honest calculation.</p></div>
+          <h3 class="sh"><span class="s-num">A.5</span> Evidence of how I work</h3>
+          <p>This role is equity based and founder facing, so how I operate matters as much as what I know. A few things I have built and shared, with one line on what each shows.</p>
+
+          <div class="ev-item" style="margin-top:18px">
+            <div class="ev-head">
+              <div>
+                <h3>This case study, as a website</h3>
+                <p class="proves">Evidence that I structure complex problems clearly and make trade-offs legible for a non-technical reader. The medium is part of the message.</p>
+              </div>
+              <span class="pill indigo">you are here</span>
+            </div>
+          </div>
+
+          <div class="ev-item">
+            <div class="ev-head">
+              <div>
+                <h3>IEP website</h3>
+                <p class="proves">Evidence that I can turn complex project requirements into structured, user friendly technical communication.</p>
+              </div>
+              <a class="btn" href="https://imran-anisha.github.io/IEP-AGM/" target="_blank" rel="noopener">Open live ↗</a>
+            </div>
+            <div class="ev-body">
+              <div class="ev-frame">
+                <iframe src="https://imran-anisha.github.io/IEP-AGM/" loading="lazy" title="IEP website"></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="ev-item">
+            <div class="ev-head">
+              <div>
+                <h3>LinkedIn post</h3>
+                <p class="proves">Evidence that I reflect publicly and communicate product and engineering thinking clearly.</p>
+              </div>
+              <a class="btn" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:7455502458203607041" target="_blank" rel="noopener">View on LinkedIn ↗</a>
+            </div>
+            <div class="ev-body">
+              <div class="ev-li">
+                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7455502458203607041" height="600" width="504" frameborder="0" allowfullscreen title="Embedded LinkedIn post"></iframe>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="pager">
-          <button data-goto="deck"><span class="pl">← Back</span>09 · The Deck</button>
-          <button class="next" data-goto="summary"><span class="pl">Back to start ↺</span>00 · Executive Summary</button>
+          <button data-goto="deck"><span class="pl">Back</span>09 · The Deck</button>
+          <button class="next" data-goto="summary"><span class="pl">Back to start</span>00 · Executive Summary</button>
         </div>
       </section>
 
